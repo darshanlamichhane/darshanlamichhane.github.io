@@ -12,8 +12,8 @@ document.addEventListener('mousemove', e => {
 /* ── BOOT SEQUENCE ──────────────────────────────────────────── */
 const bootLines = [
   '$ init darshan_portfolio ...',
-  '  [OK] cockroachdb · airflow · aws · terraform',
-  '  [OK] kyraworks_prod :: CONNECTED',
+  '  [OK] sql · airflow · aws · terraform',
+  '  [OK] data_pipeline_developer :: CONNECTED',
   '  [OK] nepali_nlp_research :: LOADED',
   '$ ready.',
   '',
