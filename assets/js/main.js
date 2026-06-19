@@ -12,9 +12,10 @@ document.addEventListener('mousemove', e => {
 /* ── BOOT SEQUENCE ──────────────────────────────────────────── */
 const bootLines = [
   '$ init darshan_portfolio ...',
-  '  [OK] sql · airflow · aws · terraform',
-  '  [OK] data_pipeline_developer :: CONNECTED',
-  '  [OK] nepali_nlp_research :: LOADED',
+  '  [OK] cockroachdb · rls · opentelemetry',
+  '  [OK] platform_and_data_engineer :: CONNECTED',
+  '  [OK] nepali_nlp_research :: ICAIL_2026 ACCEPTED',
+  '  [OK] aws · terraform · argocd :: PROVISIONED',
   '$ ready.',
   '',
   '  >> darshan@dataeng:~$',
@@ -41,7 +42,6 @@ function bootType() {
     currentEl = document.createElement('div');
     currentEl.className = 'bl';
     bootLinesEl.appendChild(currentEl);
-    // colour coding
     if (line.startsWith('$'))          currentEl.style.color = '#39ff6e';
     else if (line.includes('[OK]'))    currentEl.style.color = '#39ff6e';
     else if (line.includes('>>'))      currentEl.style.color = '#fff';
@@ -63,7 +63,6 @@ function bootType() {
   }
 }
 
-// Skip on click / keypress
 overlay.addEventListener('click', skipBoot);
 document.addEventListener('keydown', skipBoot);
 function skipBoot() {
@@ -120,11 +119,13 @@ function initTypewriter() {
   if (!el) return;
 
   const phrases = [
-    'Junior Data Engineer',
-    'Data Analyst',
-    'AI Practitioner',
+    'Platform & Data Engineer',
+    'Database Architect',
+    'Observability Nerd',
+    'NLP Researcher',
     'Cinephile',
-    'Not even a dot...',
+    'Terminal Dweller',
+    'Perpetual Learner',
   ];
 
   let pi = 0, ci = 0, deleting = false;
@@ -142,7 +143,6 @@ function initTypewriter() {
 
     let next;
     if (!deleting && ci === phrase.length) {
-      // pause at full word, then start deleting
       next = pi === phrases.length - 1 ? 2200 : 1600;
       deleting = true;
       setTimeout(tick, next);
@@ -159,35 +159,7 @@ function initTypewriter() {
     setTimeout(tick, next);
   }
 
-  // Small delay so element is fully painted before we start
   setTimeout(tick, 200);
-}
-
-/* ── COUNTERS ───────────────────────────────────────────────── */
-function initCounters() {
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        animCount(e.target);
-        obs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
-  document.querySelectorAll('.counter').forEach(el => obs.observe(el));
-}
-
-function animCount(el) {
-  const target = +el.dataset.to;
-  const dur = 1200;
-  const start = performance.now();
-  const step = now => {
-    const p = Math.min((now - start) / dur, 1);
-    const ease = 1 - Math.pow(1 - p, 3);
-    el.textContent = Math.floor(target * ease);
-    if (p < 1) requestAnimationFrame(step);
-    else el.textContent = target;
-  };
-  requestAnimationFrame(step);
 }
 
 /* ── PROJECT MODAL ──────────────────────────────────────────── */
@@ -217,16 +189,16 @@ const projects = {
     stack: 'Pandas · NumPy · Scikit-learn · Plotly · Jupyter',
   },
   3: {
-    file: 'sentiment_pipeline.sh',
-    title: 'Automated Sentiment Analysis Pipeline',
-    tags: ['FastAPI', 'HuggingFace Transformers', 'Docker', 'DVC'],
+    file: 'legal_rag_pipeline.sh',
+    title: 'Legal Document Intelligence System (RAG + Agentic QA)',
+    tags: ['LangChain', 'FAISS', 'HuggingFace', 'FastAPI', 'Docker'],
     bullets: [
-      'Built a full ML pipeline — data ingestion, preprocessing, BERT fine-tuning, and REST API serving via FastAPI.',
-      'Achieved 88% accuracy on held-out Twitter evaluation set across three sentiment classes.',
-      'Versioned datasets and model artefacts with DVC linked to remote storage — guaranteed reproducible experiments.',
-      'Containerised all services with Docker Compose; single command spins up the API, model server, and test suite.',
+      'Built a multi-step retrieval-augmented pipeline over legal corpora combining dense vector retrieval (FAISS) with a fine-tuned transformer reader.',
+      'Designed a LangChain agentic workflow: query decomposition → retrieval → evidence ranking → synthesis, with source attribution and confidence scoring.',
+      'Served predictions via FastAPI, containerised with Docker Compose for reproducible deployment.',
+      'Directly informed by NLP research on Nepali legal texts — same domain, different stack.',
     ],
-    stack: 'FastAPI · HuggingFace Transformers · Docker · DVC · Python',
+    stack: 'LangChain · FAISS · HuggingFace · FastAPI · Docker',
   },
 };
 
