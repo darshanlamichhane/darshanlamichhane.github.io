@@ -1,500 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Darshan Lamichhane — Platform & Data Engineer. Multi-tenant database architecture · Observability · CI/CD · Nepali NLP research published at ICAIL 2026." />
-  <meta property="og:title" content="Darshan Lamichhane · Platform & Data Engineer" />
-  <meta property="og:url" content="https://darshanlamichhane.com.np" />
-  <title>darshan@dataeng:~$</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0e0a'/><rect x='1' y='1' width='30' height='30' rx='5' fill='none' stroke='%2339ff6e' stroke-width='1.5'/><text x='4' y='14' font-family='monospace' font-size='8' fill='%2339ff6e'>%3E_</text><text x='4' y='24' font-family='monospace' font-size='6' fill='%234a6a4a'>data</text></svg>" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b100d">
+  <title>Darshan Lamichhane | Software Engineer &amp; Markish Co-founder</title>
+  <meta name="description" content="Darshan Lamichhane is a software engineer in Kathmandu, Nepal, and a Markish co-founder. He previously worked on engineering systems at Eksana and KyraWorks.">
+  <link rel="canonical" href="https://darshanlamichhane.com.np/">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Darshan Lamichhane | Software Engineer &amp; Markish Co-founder">
+  <meta property="og:description" content="Darshan Lamichhane is a software engineer in Kathmandu, Nepal, and a Markish co-founder. He previously worked on engineering systems at Eksana and KyraWorks.">
+  <meta property="og:url" content="https://darshanlamichhane.com.np/">
+  <meta property="og:image" content="https://darshanlamichhane.com.np/assets/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:site_name" content="Darshan Lamichhane">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Darshan Lamichhane | Software Engineer &amp; Markish Co-founder">
+  <meta name="twitter:description" content="Darshan Lamichhane is a software engineer in Kathmandu, Nepal, and a Markish co-founder. He previously worked on engineering systems at Eksana and KyraWorks.">
+  <meta name="twitter:image" content="https://darshanlamichhane.com.np/assets/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Darshan Lamichhane",
+    "url": "https://darshanlamichhane.com.np/",
+    "description": "Software engineer based in Kathmandu, Nepal. Co-founder and engineer at Markish, with previous engineering experience at Eksana and KyraWorks.",
+    "jobTitle": "Software Engineer",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Kathmandu University"
+    },
+    "sameAs": [
+      "https://github.com/darshanlamichhane",
+      "https://www.linkedin.com/in/darshanlamichhane/"
+    ],
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Markish",
+      "url": "https://markish.tech"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Darshan Lamichhane",
+    "url": "https://darshanlamichhane.com.np/",
+    "inLanguage": "en"
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="/" aria-label="Darshan Lamichhane, home" aria-current="page"><span aria-hidden="true">&gt;_</span> darshan</a>
+      <a class="nav-link" href="/writing/">Writing <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
 
-<!-- BOOT OVERLAY -->
-<div id="boot-overlay">
-  <div id="boot-terminal">
-    <div id="boot-lines"></div>
-    <div id="boot-cursor">▋</div>
-  </div>
-</div>
-
-<div class="scanlines" aria-hidden="true"></div>
-
-<!-- NAV -->
-<nav id="nav">
-  <div class="nav-inner container">
-    <a href="#hero" class="nav-brand mono">
-      <span class="g">darshan</span><span class="dim">@dataeng</span><span class="dim">:</span><span class="g">~</span><span class="dim">$</span>
-    </a>
-    <div class="nav-links">
-      <a href="#whoami"     class="nav-link mono"><span class="dim">./</span>whoami</a>
-      <a href="#experience" class="nav-link mono"><span class="dim">./</span>experience</a>
-      <a href="#projects"   class="nav-link mono"><span class="dim">./</span>projects</a>
-      <a href="#research"   class="nav-link mono"><span class="dim">./</span>research</a>
-      <a href="#skills"     class="nav-link mono"><span class="dim">./</span>skills</a>
-      <a href="#contact"    class="nav-link mono"><span class="dim">./</span>contact</a>
-    </div>
-    <a href="https://drive.google.com/file/d/1Oc2iLOwbupzNEG2RfYGciNxAWzfEZ-m5/view?usp=sharing" target="_blank" class="btn-cv mono">cat cv.pdf</a>
-    <button id="menu-toggle" aria-label="menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<div id="mobile-menu">
-  <a href="#whoami"     class="nav-link mono">./whoami</a>
-  <a href="#experience" class="nav-link mono">./experience</a>
-  <a href="#projects"   class="nav-link mono">./projects</a>
-  <a href="#research"   class="nav-link mono">./research</a>
-  <a href="#skills"     class="nav-link mono">./skills</a>
-  <a href="#contact"    class="nav-link mono">./contact</a>
-  <a href="https://drive.google.com/file/d/1Oc2iLOwbupzNEG2RfYGciNxAWzfEZ-m5/view?usp=sharing" target="_blank" class="btn-cv mono" style="margin-top:.75rem">cat cv.pdf</a>
-</div>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="container hero-wrap">
-
-    <div class="hero-left">
-      <div class="hero-status">
-        <span class="status-dot"></span>
-        <span class="mono">kathmandu, nepal &nbsp;·&nbsp; platform & data engineer</span>
+  <main id="main">
+    <section class="hero container" id="top" aria-labelledby="intro-title">
+      <div class="hero-name">
+        <p class="eyebrow"><span aria-hidden="true">~/</span> Kathmandu, Nepal</p>
+        <h1 id="intro-title">Darshan<br><span>Lamichhane</span></h1>
       </div>
-
-      <h1 class="hero-name">
-        <span class="n1">Darshan</span>
-        <span class="n2">Lamichhane</span>
-      </h1>
-
-      <div class="hero-role-row">
-        <span class="mono dim">[</span>
-        <span id="hero-role" class="mono"></span>
-        <span class="hero-caret mono">▋</span>
-        <span class="mono dim">]</span>
-      </div>
-
-      <p class="hero-bio">
-        I build the infrastructure layer most people never see:
-        multi-tenant databases, observability systems, audit trails, CI/CD pipelines.
-        Also an NLP researcher publishing on Nepali — a language with almost no tooling built for it.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#projects" class="btn-primary mono">
-          <i class="fas fa-terminal"></i> explore --work
-        </a>
-        <a href="https://www.linkedin.com/in/darshanlamichhane/" target="_blank" class="btn-ghost mono">
-          <i class="fab fa-linkedin"></i> --linkedin
-        </a>
-        <a href="mailto:darshanlamichhane012@gmail.com" class="btn-ghost mono">
-          <i class="fas fa-envelope"></i> --email
-        </a>
-      </div>
-
-    </div>
-
-    <div class="hero-right">
-      <div class="dag-card">
-        <div class="dag-titlebar">
-          <span class="pcd red"></span>
-          <span class="pcd yellow"></span>
-          <span class="pcd green"></span>
-          <span class="mono dag-title">darshan_lamichhane.profile</span>
-        </div>
-        <div class="dag-body">
-          <div class="dag-row ok"><span class="dr-icon">✓</span><span class="mono dr-task">platform_and_data_engineer</span><span class="mono dr-t">KyraWorks</span></div>
-          <div class="dag-row ok"><span class="dr-icon">✓</span><span class="mono dr-task">b_e_computer_engineering</span><span class="mono dr-t">KU · Feb 2026</span></div>
-          <div class="dag-row ok"><span class="dr-icon">✓</span><span class="mono dr-task">multi_tenant_db_security</span><span class="mono dr-t">CockroachDB · RLS</span></div>
-          <div class="dag-row ok"><span class="dr-icon">✓</span><span class="mono dr-task">observability_platform</span><span class="mono dr-t">OTel · OpenObserve</span></div>
-          <div class="dag-row ok"><span class="dr-icon">✓</span><span class="mono dr-task">nlp_researcher</span><span class="mono dr-t">ICAIL 2026 · 2 papers</span></div>
-          <div class="dag-row ok"><span class="dr-icon">✓</span><span class="mono dr-task">hackathon_winner</span><span class="mono dr-t">×2</span></div>
-          <div class="dag-row running"><span class="dr-icon spin">⟳</span><span class="mono dr-task">learning</span><span class="mono dr-t">/always</span></div>
-        </div>
-        <div class="dag-footer mono">
-          <span class="g">status: open to new problems</span> · kathmandu, np
+      <div class="hero-copy">
+        <p class="hero-role">Software engineer. Co-founder at Markish.</p>
+        <p class="hero-intro">I studied Computer Engineering at Kathmandu University. I like understanding how things fit together, then seeing what happens when people use them.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/darshanlamichhane" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="mailto:darshanlamichhane012@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
-
-<!-- WHOAMI -->
-<section id="whoami" class="s-alt">
-  <div class="container">
-    <div class="scmd reveal mono">~$ <span class="cmd-t"> cat whoami.txt</span></div>
-
-    <div class="wg">
-      <div class="wtext reveal">
-        <p>
-          I'm a Computer Engineering graduate from Kathmandu University (Feb 2026),
-          with a focus on data infrastructure, security engineering, and applied NLP.
-        </p>
-        <p>
-          At KyraWorks I owned the data and security layer of a multi-tenant SaaS
-          platform from scratch — distributed SQL architecture, Row-Level Security middleware,
-          tamper-evident audit logging, per-service credential isolation, a full observability
-          stack, and CI/CD pipelines across every service repository. The kind of layer most
-          junior engineers don't get near for years.
-        </p>
-        <p>
-          I also do NLP research in the Nepali language domain —
-          legal argument mining from court verdicts and legal document translation.
-          Two papers accepted at ICAIL 2026.
-        </p>
-        <p>
-          Outside the terminal: hackathon organiser, KUCC Secretary, and someone who
-          loves movies, standups, and obsessing over tech startups.
-        </p>
-      </div>
-
-      <div class="wcards reveal delay-2">
-        <div class="wcard"><span class="wk mono">education</span><span class="wv">B.E. Computer Engineering · KU</span></div>
-        <div class="wcard"><span class="wk mono">graduated</span><span class="wv">Kathmandu University, Feb 2026</span></div>
-        <div class="wcard"><span class="wk mono">recent role</span><span class="wv">Platform & Data Eng · KyraWorks</span></div>
-        <div class="wcard"><span class="wk mono">location</span><span class="wv">Kathmandu, Nepal 🇳🇵</span></div>
-        <div class="wcard"><span class="wk mono">stack</span><span class="wv">Python · SQL · Distributed SQL · Observability · Cloud</span></div>
-        <div class="wcard"><span class="wk mono">research</span><span class="wv">Nepali Legal NLP · ICAIL 2026</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="container">
-    <div class="scmd reveal mono">~$ <span class="cmd-t"> cat experience.log | grep -v irrelevant</span></div>
-
-    <div class="exp-list">
-
-      <div class="exp-block reveal">
-        <div class="exp-left">
-          <span class="exp-date mono">Dec 2025<br>→ Jun 2026</span>
-          <div class="exp-line"></div>
+    <section class="section section-muted" id="markish" aria-labelledby="markish-title">
+      <article class="container markish-feature">
+        <div class="markish-heading">
+          <p class="kicker">01 / Currently building</p>
+          <h2 id="markish-title">Markish</h2>
+          <p class="markish-role">Co-founder &amp; Engineer</p>
+          <a class="text-link" href="https://markish.tech" target="_blank" rel="noopener noreferrer">Visit Markish <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="exp-right">
-          <div class="exp-hdr">
-            <h3 class="exp-role">Platform & Data Engineer</h3>
-            <span class="exp-co mono">KyraWorks Pvt. Ltd.</span>
-          </div>
-          <ul class="exp-blist">
-            <li><span class="ba">›</span> Took a SaaS startup from zero infrastructure to a secure, observable, compliance-ready multi-tenant platform in six months — largely as the sole owner of the data and security layer.</li>
-            <li><span class="ba">›</span> Built the company's multi-tenant data security model from scratch: tenant isolation enforced at the DB layer via Row-Level Security middleware, a tamper-evident audit trail, and GDPR-compliant consent tracking — the foundation that let the company sell to security-conscious customers without a dedicated security team.</li>
-            <li><span class="ba">›</span> Stood up the company's first observability platform from nothing — failures across 7+ services went from "a customer reports it" to automated alerting in minutes.</li>
-            <li><span class="ba">›</span> Eliminated single-shared-credential DB access (a standing security liability) by migrating to least-privilege, per-service roles — zero downtime during cutover.</li>
-            <li><span class="ba">›</span> Standardised CI/CD across all service repos with reusable GitHub Actions workflows, automated security scanning, and migrated five production services off a monolith without disrupting feature work.</li>
-            <li><span class="ba">›</span> Automated AWS infrastructure backup, drift detection, and credential rotation with Terraform, removing recurring manual operational overhead.</li>
-          </ul>
-          <div class="etags">
-            <span class="etag">CockroachDB</span><span class="etag">OpenTelemetry</span><span class="etag">OpenObserve</span><span class="etag">ArgoCD</span><span class="etag">AWS</span><span class="etag">Terraform</span><span class="etag">GitHub Actions</span><span class="etag">immudb</span><span class="etag">HashiCorp Vault</span><span class="etag">Python</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-block reveal delay-1">
-        <div class="exp-left">
-          <span class="exp-date mono">Oct 2025<br>→ Nov 2025</span>
-          <div class="exp-line"></div>
-        </div>
-        <div class="exp-right">
-          <div class="exp-hdr">
-            <h3 class="exp-role">Data Analysis Intern</h3>
-            <span class="exp-co mono">KyraWorks Pvt. Ltd.</span>
-          </div>
-          <ul class="exp-blist">
-            <li><span class="ba">›</span> Rotated across Data Analysis, ML, and MLOps teams — full exposure from raw ingestion to deployed model monitoring within two months.</li>
-            <li><span class="ba">›</span> Wrote onboarding runbooks later used to ramp up new engineers faster.</li>
-          </ul>
-          <div class="etags">
-            <span class="etag">MLOps</span><span class="etag">SQL</span><span class="etag">Pandas</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="s-alt">
-  <div class="container">
-    <div class="scmd reveal mono">~$ <span class="cmd-t"> ls -la ./projects/</span></div>
-    <div class="pgrid">
-
-      <article class="pcard reveal delay-1" data-proj="1">
-        <div class="pcard-top">
-          <span class="pnum mono">01</span>
-          <span class="ptag mono">ETL</span>
-        </div>
-        <h3 class="ptitle">Real-Time Flight Delay<br>Analytics Pipeline</h3>
-        <p class="pdesc">Airflow DAGs with retry logic and SLA alerts, normalised PostgreSQL schema, live Streamlit delay dashboard.</p>
-        <div class="pstack">
-          <span class="stag">Python</span><span class="stag">Airflow</span><span class="stag">PostgreSQL</span><span class="stag">Streamlit</span>
-        </div>
-        <div class="pfooter">
-          <span class="mono ptype">Orchestration · Dashboarding</span>
-          <div class="plinks" onclick="event.stopPropagation()">
-            <a href="https://github.com/darshanlamichhane" target="_blank" class="plink mono" title="GitHub"><i class="fab fa-github"></i></a>
-          </div>
+        <div class="markish-copy">
+          <p>We’re building Markish to make social media management less manual for businesses, creators, and agencies.</p>
+          <p>I mostly work on the backend and infrastructure, from platform integrations to deployments and the issues that turn up after a release.</p>
         </div>
       </article>
+    </section>
 
-      <article class="pcard reveal delay-2" data-proj="2">
-        <div class="pcard-top">
-          <span class="pnum mono">02</span>
-          <span class="ptag mono">ML</span>
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-heading"><p class="kicker">02 / Before that</p><h2 id="experience-title">Other places I’ve worked.</h2></div>
+        <div class="experience-list">
+          <article class="experience-item">
+            <div class="experience-meta"><span class="mono">Data and AI Engineer</span></div>
+            <div class="experience-detail"><h3>Eksana</h3><p>I worked on the data pipelines behind legal research, from retrieving and processing documents to making them searchable. I also worked on recovering failed background jobs.</p><a class="text-link" href="https://eksana.org" target="_blank" rel="noopener noreferrer">Visit Eksana <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="experience-item">
+            <div class="experience-meta"><span class="mono">Platform &amp; Data Engineer</span></div>
+            <div class="experience-detail"><h3>KyraWorks</h3><p>I worked on infrastructure for a multi-tenant SaaS product, including database access, tenant isolation, observability, and CI/CD. I also got to work with data and machine learning systems.</p></div>
+          </article>
         </div>
-        <h3 class="ptitle">Global Energy Consumption<br>Forecasting</h3>
-        <p class="pdesc">Regression forecasting on multi-decade datasets. Feature engineering + 23% RMSE reduction vs baseline. Interactive Plotly dashboards.</p>
-        <div class="pstack">
-          <span class="stag">Pandas</span><span class="stag">Scikit-learn</span><span class="stag">Plotly</span>
-        </div>
-        <div class="pfooter">
-          <span class="mono ptype">Forecasting · EDA</span>
-          <div class="plinks" onclick="event.stopPropagation()">
-            <a href="https://github.com/darshanlamichhane" target="_blank" class="plink mono" title="GitHub"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </article>
+      </div>
+    </section>
 
-      <article class="pcard reveal delay-3" data-proj="3">
-        <div class="pcard-top">
-          <span class="pnum mono">03</span>
-          <span class="ptag mono">NLP</span>
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <div class="section-heading"><p class="kicker">03 / Research</p><h2 id="research-title">Selected research</h2></div>
+        <div class="research-list">
+          <article class="research-item">
+            <h3>G-LARA: Graph-Augmented Domain Adaptation for Nepali Legal Argument Mining</h3>
+            <p>Accepted at ICAIL 2026 · Co-author</p>
+            <a class="text-link" href="https://site.smu.edu.sg/icail-2026#accepted-papers" target="_blank" rel="noopener noreferrer">Accepted papers <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="research-item">
+            <h3>Directional Asymmetry in Low-Resource Legal Machine Translation: A Nepali-English Case Study</h3>
+            <p>Accepted at ICAIL 2026 · Co-author</p>
+            <a class="text-link" href="https://site.smu.edu.sg/icail-2026#accepted-papers" target="_blank" rel="noopener noreferrer">Accepted papers <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="research-item">
+            <h3>Enhancing Ethical Reasoning in Tiny Language Models via Fine-Tuning and Multi-Agent Consensus</h3>
+            <p>Kathmandu University Journal of Science, Engineering and Technology, Vol. 18, No. 2, 2024</p>
+            <a class="text-link" href="https://ncci.ku.edu.np/uploads/archive/1770520274687-Enhancing_Ethical_Reasoning_in_Tiny_Language_Models_via_Fine_Tuning_and_Multi_Agent_Consensus-Sushan-Adhikari.pdf" target="_blank" rel="noopener noreferrer">Read paper <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="research-item">
+            <h3>Automated Generation of Calculus Derivative Animations Using Fine-Tuned Large Language Models: Bridging the Programming Expertise Gap in STEM Education</h3>
+            <p>University Scholar Conference, 2025</p>
+          </article>
         </div>
-        <h3 class="ptitle">Legal Document Intelligence<br>System (RAG + Agentic QA)</h3>
-        <p class="pdesc">Multi-step retrieval-augmented system over legal corpora with query decomposition, evidence ranking, and source-attributed answers.</p>
-        <div class="pstack">
-          <span class="stag">LangChain</span><span class="stag">FAISS</span><span class="stag">FastAPI</span><span class="stag">Docker</span>
-        </div>
-        <div class="pfooter">
-          <span class="mono ptype">RAG · Agentic AI</span>
-          <div class="plinks" onclick="event.stopPropagation()">
-            <a href="https://github.com/darshanlamichhane" target="_blank" class="plink mono" title="GitHub"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-      </article>
+      </div>
+    </section>
 
+    <section class="section section-muted" id="writing" aria-labelledby="writing-title">
+      <div class="container writing-row">
+        <div><p class="kicker">04 / Writing</p><h2 id="writing-title">Notes from building things.</h2></div>
+        <div class="writing-status"><p>Things I’ve learned, broken, or spent too long debugging.</p><a class="text-link" href="/writing/when-was-the-last-time-you-were-bored/">When was the last time you were bored? <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-links" aria-label="Social and contact links">
+        <a href="https://github.com/darshanlamichhane" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/darshanlamichhane/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="mailto:darshanlamichhane012@gmail.com">Email <span aria-hidden="true">↗</span></a>
+      </nav>
     </div>
-  </div>
-</section>
-
-<!-- PROJECT MODAL -->
-<div id="proj-modal">
-  <div id="proj-modal-box">
-    <div class="modal-bar">
-      <span class="pcd red modal-close-btn" id="modal-close-btn" title="close"></span>
-      <span class="pcd yellow"></span>
-      <span class="pcd green"></span>
-      <span class="mono modal-fname" id="modal-fname">project.sh</span>
-    </div>
-    <div id="modal-body"></div>
-  </div>
-</div>
-
-<!-- RESEARCH -->
-<section id="research">
-  <div class="container">
-    <div class="scmd reveal mono">~$ <span class="cmd-t"> SELECT * FROM publications ORDER BY year DESC;</span></div>
-
-    <div class="rtable reveal delay-1">
-      <div class="rt-head mono">
-        <span class="rc-year">year</span>
-        <span class="rc-venue">venue</span>
-        <span class="rc-title">title</span>
-        <span class="rc-status">status</span>
-      </div>
-      <div class="rt-row">
-        <span class="rc-year mono g">2026</span>
-        <span class="rc-venue mono">ICAIL 2026</span>
-        <span class="rc-title">Nepali Legal Text Translation <em class="collab mono">(+ Nepal Law Commission)</em></span>
-        <span class="rc-status"><span class="badge pub">accepted</span></span>
-      </div>
-      <div class="rt-row">
-        <span class="rc-year mono g">2026</span>
-        <span class="rc-venue mono">ICAIL 2026</span>
-        <span class="rc-title">Argument Mining of Nepali District Court Verdicts</span>
-        <span class="rc-status"><span class="badge pub">accepted</span></span>
-      </div>
-      <div class="rt-row">
-        <span class="rc-year mono">2025</span>
-        <span class="rc-venue mono">NCCI 2025</span>
-        <span class="rc-title">Ethical Reasoning in Tiny Language Models</span>
-        <span class="rc-status"><span class="badge pub">published</span></span>
-      </div>
-      <div class="rt-row">
-        <span class="rc-year mono">2025</span>
-        <span class="rc-venue mono">USC 2025</span>
-        <span class="rc-title">Automated Generation of Calculus Animations using LLMs</span>
-        <span class="rc-status"><span class="badge pub">published</span></span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="s-alt">
-  <div class="container">
-    <div class="scmd reveal mono">~$ <span class="cmd-t"> cat skills.json | python3 -m json.tool</span></div>
-
-    <div class="sjson reveal delay-1">
-      <span class="jb mono">{</span>
-      <div class="jblock">
-        <span class="jk mono">"databases"</span><span class="jc mono">: [</span>
-        <div class="jarr"><span class="stag hl">CockroachDB</span><span class="stag hl">distributed SQL</span><span class="stag hl">Row-Level Security</span><span class="stag hl">Change Data Capture</span><span class="stag">PostgreSQL</span><span class="stag">immudb</span></div>
-        <span class="jclose mono">],</span>
-      </div>
-      <div class="jblock">
-        <span class="jk mono">"observability"</span><span class="jc mono">: [</span>
-        <div class="jarr"><span class="stag hl">OpenTelemetry</span><span class="stag hl">OpenObserve</span><span class="stag">Prometheus</span><span class="stag">Grafana</span><span class="stag">distributed tracing</span><span class="stag">SLO design</span></div>
-        <span class="jclose mono">],</span>
-      </div>
-      <div class="jblock">
-        <span class="jk mono">"cloud_infra"</span><span class="jc mono">: [</span>
-        <div class="jarr"><span class="stag hl">Terraform</span><span class="stag hl">AWS KMS</span><span class="stag hl">ArgoCD</span><span class="stag hl">HashiCorp Vault</span><span class="stag">CloudWatch</span><span class="stag">Lambda</span><span class="stag">EventBridge</span><span class="stag">Docker</span></div>
-        <span class="jclose mono">],</span>
-      </div>
-      <div class="jblock">
-        <span class="jk mono">"ci_cd"</span><span class="jc mono">: [</span>
-        <div class="jarr"><span class="stag hl">GitHub Actions</span><span class="stag">reusable workflows</span><span class="stag">SAST scanning</span><span class="stag">secret scanning</span><span class="stag">automated PR review</span></div>
-        <span class="jclose mono">],</span>
-      </div>
-      <div class="jblock">
-        <span class="jk mono">"ml_nlp"</span><span class="jc mono">: [</span>
-        <div class="jarr"><span class="stag">Scikit-learn</span><span class="stag">TensorFlow</span><span class="stag">Transformers</span><span class="stag">LangChain</span><span class="stag">RAG systems</span><span class="stag">LoRA fine-tuning</span><span class="stag">FastAPI</span></div>
-        <span class="jclose mono">],</span>
-      </div>
-      <div class="jblock">
-        <span class="jk mono">"data_engineering"</span><span class="jc mono">: [</span>
-        <div class="jarr"><span class="stag">Apache Airflow</span><span class="stag">ETL Pipelines</span><span class="stag">Pandas</span><span class="stag">NumPy</span><span class="stag">PySpark</span></div>
-        <span class="jclose mono">],</span>
-      </div>
-      <div class="jblock">
-        <span class="jk mono">"languages"</span><span class="jc mono">: [</span>
-        <div class="jarr"><span class="stag">Python</span><span class="stag">SQL</span></div>
-        <span class="jclose mono">]</span>
-      </div>
-      <span class="jb mono">}</span>
-    </div>
-  </div>
-</section>
-
-<!-- ACHIEVEMENTS -->
-<section id="achievements" class="s-alt">
-  <div class="container">
-    <div class="scmd reveal mono">~$ <span class="cmd-t"> grep -i "award\|cert\|win" ./resume.txt</span></div>
-
-    <div class="ach-grid">
-      <div class="ach-item reveal delay-1">
-        <span class="ach-icon mono">$</span>
-        <div>
-          <p class="ach-title">Associate Data Engineer in SQL</p>
-          <p class="ach-sub">DataCamp</p>
-        </div>
-      </div>
-      <div class="ach-item reveal delay-2">
-        <span class="ach-icon mono">$</span>
-        <div>
-          <p class="ach-title">11-day Deep Learning &amp; LLMs Workshop</p>
-          <p class="ach-sub">ANAIS · NAAMII</p>
-        </div>
-      </div>
-      <div class="ach-item reveal delay-3">
-        <span class="ach-icon g mono">★</span>
-        <div>
-          <p class="ach-title">Best Presenter Award</p>
-          <p class="ach-sub">AI Crusade Hackathon 2024</p>
-        </div>
-      </div>
-      <div class="ach-item reveal delay-4">
-        <span class="ach-icon g mono">★</span>
-        <div>
-          <p class="ach-title">Health Track Winner</p>
-          <p class="ach-sub">AI Crusade Hackathon 2023</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LEADERSHIP -->
-<section id="leadership">
-  <div class="container">
-    <div class="scmd reveal mono">~$ <span class="cmd-t"> cat leadership.log</span></div>
-
-    <div class="lead-grid">
-      <div class="lead-card reveal delay-1">
-        <p class="lead-role">Vice President</p>
-        <p class="lead-org">AuraEd</p>
-      </div>
-      <div class="lead-card reveal delay-2">
-        <p class="lead-role">Secretary</p>
-        <p class="lead-org">Kathmandu University Computer Club</p>
-      </div>
-      <div class="lead-card reveal delay-3">
-        <p class="lead-role">Student Ambassador</p>
-        <p class="lead-org">ANAIS 2024 · NAAMII · 100+ participants</p>
-      </div>
-      <div class="lead-card reveal delay-1">
-        <p class="lead-role">Organising Committee</p>
-        <p class="lead-org">KU Hackfest 2023 · Hult Prize</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="s-alt">
-  <div class="container">
-    <div class="scmd reveal mono">~$ <span class="cmd-t"> echo "Let's build something." >> connect.txt</span></div>
-
-    <div class="cwrap">
-      <div class="cleft reveal">
-        <h2 class="cheading">Get in<br>touch<span class="g">.</span></h2>
-        <p class="cnote mono">
-          // kathmandu, nepal<br>
-          // remote-friendly
-        </p>
-      </div>
-      <div class="cright reveal delay-2">
-        <a href="mailto:darshanlamichhane012@gmail.com" class="clink">
-          <span class="ci mono"><i class="fas fa-envelope"></i></span>
-          <span><span class="cl mono">// email</span><span class="cv">darshanlamichhane012@gmail.com</span></span>
-          <span class="ca">→</span>
-        </a>
-        <a href="https://www.linkedin.com/in/darshanlamichhane/" target="_blank" class="clink">
-          <span class="ci mono"><i class="fab fa-linkedin"></i></span>
-          <span><span class="cl mono">// linkedin</span><span class="cv">in/darshanlamichhane</span></span>
-          <span class="ca">→</span>
-        </a>
-        <a href="https://drive.google.com/file/d/1Oc2iLOwbupzNEG2RfYGciNxAWzfEZ-m5/view?usp=sharing" target="_blank" class="clink">
-          <span class="ci mono"><i class="fas fa-file-code"></i></span>
-          <span><span class="cl mono">// resume</span><span class="cv">Darshan_CV.pdf · download</span></span>
-          <span class="ca">→</span>
-        </a>
-        <a href="tel:+9779841879332" class="clink">
-          <span class="ci mono"><i class="fas fa-phone"></i></span>
-          <span><span class="cl mono">// phone</span><span class="cv">+977-9841879332</span></span>
-          <span class="ca">→</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="container footer-inner">
-    <span class="mono">darshan@dataeng:~$ <span class="g">exit 0</span></span>
-    <span class="mono fc">© 2026 · <a href="https://darshanlamichhane.com.np">darshanlamichhane.com.np</a></span>
-  </div>
-</footer>
-
-<script src="assets/js/main.js"></script>
+  </footer>
 </body>
 </html>
