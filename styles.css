@@ -84,7 +84,7 @@ h2 { margin: 0; font-size: clamp(1.55rem, 2.8vw, 2.1rem); line-height: 1.2; lett
 
 .writing-row { display: grid; grid-template-columns: 220px 1fr auto; align-items: center; gap: 2rem; }
 .writing-row h2 { max-width: 400px; margin-top: .35rem; font-size: clamp(1.3rem, 2.2vw, 1.65rem); font-weight: 500; letter-spacing: -.025em; }
-.writing-status { display: flex; align-items: center; gap: 1.25rem; }
+.writing-status { display: flex; align-items: flex-start; flex-direction: column; gap: .4rem; }
 .writing-status p { margin: 0; color: var(--muted); font-size: .83rem; }
 
 .site-footer { border-top: 1px solid var(--line); }
@@ -114,6 +114,8 @@ h2 { margin: 0; font-size: clamp(1.55rem, 2.8vw, 2.1rem); line-height: 1.2; lett
 .essay-byline { margin: 1rem 0 0; color: var(--quiet); font-family: var(--mono); font-size: .72rem; }
 .essay-body { color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.08rem); line-height: 1.9; }
 .essay-body p { margin: 0 0 1.45rem; }
+.essay-body h2 { margin: 2.3rem 0 .8rem; color: var(--text); font-size: clamp(1.25rem, 2.4vw, 1.55rem); line-height: 1.35; letter-spacing: -.035em; }
+.essay-body h2:first-child { margin-top: 0; }
 .essay-body strong { color: var(--text); font-weight: 650; }
 .essay-pullquote { margin: 2rem 0; padding: .1rem 0 .1rem 1.35rem; border-left: 2px solid var(--accent); color: var(--text); font-size: clamp(1.08rem, 2vw, 1.28rem); line-height: 1.75; }
 .essay-pullquote p { margin: 0; }
